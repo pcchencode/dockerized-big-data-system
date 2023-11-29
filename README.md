@@ -66,7 +66,7 @@ Found 1 items
 -rw-r--r--   3 root supergroup   19318740 2023-11-29 01:25 /usr/spotify/dataset.csv
 ```
 
-## Read Hadoop data from spary
+## Read Hadoop data from spark
 Spark and PySpark are in the container: `spark-master`
 * Access into PySpark container
 ```
