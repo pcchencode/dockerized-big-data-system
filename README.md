@@ -28,7 +28,10 @@ Some details:
 
 
 
-## Construct the big-data analytic environment
+# Construct the big-data analytic environment
+The following figure is our framework:
+![framework](framework.png)
+
 1. git clone this project
 
 2. cd into this directory, and `docker-compose` the containers
@@ -167,6 +170,11 @@ Hive sever is on container: `hive-server`
     ```
 
 Up till now, the data is all set. We are ready to analyze it.
+
+# Analyze music data on Big-Data environment
+Please reference the two scripts: [script.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script.py)and [script_hive.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script_hive.py). The following demostrates the overall data pipeline:
+![datapipeline](datapipeline.png)
+
 
 ## Analyze the data via PySpark
 Check the `script.py`
