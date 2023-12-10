@@ -35,9 +35,11 @@ The following figure is our framework:
 1. git clone this project
 
 2. cd into this directory, and `docker-compose` the containers
+    (Note: it might take a while to construct)
     ```
     $ docker-compose up -d
     ```
+    
 
 3. Check all the containers
     ```
@@ -172,11 +174,37 @@ Hive sever is on container: `hive-server`
 Up till now, the data is all set. We are ready to analyze it.
 
 # Analyze music data on Big-Data environment
-Please reference the two scripts: [script.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script.py)and [script_hive.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script_hive.py). The following demostrates the overall data pipeline:
+Please reference the two scripts: [script.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script.py) and [script_hive.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script_hive.py). The following demostrates the overall data pipeline:
 ![datapipeline](datapipeline.png)
 
+## [Important!] please use the environment in `jupyter` container
+1. Copy [script.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script.py) and [script_hive.py](https://github.com/pcchencode/dockerized-big-data-system/blob/master/script_hive.py) into container.
+    ```
+    $ docker cp script.py jupyter:/home/jovyan/work/
+    $ docker cp script_hive.py jupyter:/home/jovyan/work/
+    ```
 
+2. Access into `jupyter` container to check whether is in it:
+    ```
+    $ docker exec -it jupyter bash
+    $ jovyan@9b1584d48ad2:~/work$ ls
+    ```
+    The result should be
+    ```
+    script_hive.py  script.py
+    jovyan@9b1584d48ad2:~/work$
+    ```
+Then there you go can run the script:
 ## Analyze the data via PySpark
+#### How to run the script?
+1. First, go into `jupyter` container
+    ```
+    $ docker exec -it jupyter bash
+    ```
+2. run this command
+    ```
+    python3 script.py
+    ```
 Check the `script.py`
 The basic data pipeline
 1. Load Data
@@ -184,6 +212,15 @@ The basic data pipeline
 3. Export
 
 ## Analyze the data via Hive
+#### How to run the script?
+1. First, go into `jupyter` container
+    ```
+    $ docker exec -it jupyter bash
+    ```
+2. run this command
+    ```
+    python3 script_hive.py
+    ```
 Check the `script_hive.py`
 1. Load Data
 2. Summary Statistics
