@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Data Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Spotify Track Analysis</h1>
+    </header>
+    
+    <section id="search">
+        <input type="text" id="track-id-input" placeholder="Enter Song">
+        <button id="fetch-track">Search</button>
+    </section>
+    
+    <div class="chart-container">
+        <canvas id="audioFeaturesChart" width="200" height="200"></canvas>
+        <div id="track-info">
+            <div id="track-genre" class="info-box">
+              <h3>Genre</h3>
+              <div class="info-content" id="genre-value"><!-- Genre will be dynamically inserted here --></div>
+            </div>
+            <div id="track-key" class="info-box">
+              <h3>Key</h3>
+              <div class="info-content" id="key-value"><!-- Key will be dynamically inserted here --></div>
+            </div>
+          </div>
+        <div id="popularity-container">
+            <h2>Popularity</h2> <!-- This is the new line for the Popularity label -->
+            <div id="popularity-meter">
+                <div id="popularity-score"></div>
+            </div>
+        </div>
+    </div>    
+
+    <section id="track-details">
+        <!-- Track items will be populated here by scripts.js -->
+    </section>
+    
+    <footer>
+        <p>Spotify Data Viewer</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

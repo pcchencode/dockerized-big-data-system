@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#search {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#search-box {
+    padding: 10px;
+    width: 300px;
+    margin-right: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+}
+
+#track-list {
+    margin-top: 20px;
+}
+
+#audioFeaturesChart {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+#popularity-container h2 {
+    text-align: center; /* Center the text */
+    color: #333; /* Set the text color */
+    margin-bottom: 10px; /* Space between the label and the meter */
+    font-size: 1.2em; /* Set the size of the label text */
+}
+
+#popularity-meter {
+    /* Add styles for the appearance of the meter */
+    width: 50px; /* Adjust as necessary */
+    height: 200px; /* Adjust as necessary */
+    background-color: #eee; /* Background of the meter */
+    border-radius: 25px; /* Rounded corners */
+    position: relative; /* Allows absolute positioning of the score inside */
+}
+
+#popularity-score {
+    position: absolute;
+    bottom: 0; /* Start at the bottom of the meter */
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em; /* Adjust as necessary */
+    font-weight: bold;
+    color: #555;
+    transition: height 0.3s ease; /* Smooth transition for the meter fill */
+    background-color: #fc5c65; /* Color of the fill */
+    border-radius: 25px; /* Rounded corners */
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around; /* This will space out the children evenly */
+    align-items: center; /* This will align the children vertically */
+}
+
+.info-box {
+    background-color: #ffffff; /* White background for the box */
+    border: 2px solid #dddddd; /* Border for the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    padding: 10px; /* Padding inside the box */
+    margin: 0 10px; /* Margin between the boxes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Simple shadow for depth */
+    display: inline-block; /* Align side by side */
+    width: 120px; /* Fixed width for alignment */
+    text-align: center; /* Center the text */
+  }
+  
+.info-content {
+    color: #333; /* Dark text color */
+    padding: 5px 0; /* Padding for the content */
+    border-radius: 4px; /* Rounded corners for the content */
+    margin-top: 5px; /* Space between title and content */
+    font-weight: bold; /* Bold text for emphasis */
+}
+  
+#track-info {
+    text-align: center; /* Center the boxes */
+}
+  
+/* Specific styles for genre box */
+#track-genre .info-content {
+    background-color: #4CAF50; /* Green background for genre content */
+    color: #fff; /* White text color */
+}
+  
+  /* Specific styles for key box */
+#track-key .info-content {
+    background-color: #2196F3; /* Blue background for key content */
+    color: #fff; /* White text color */
+}
+    
+footer p {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
