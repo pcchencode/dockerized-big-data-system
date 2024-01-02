@@ -225,3 +225,19 @@ Check the `script_hive.py`
 1. Load Data
 2. Summary Statistics
 3. Export
+
+## Running the application
+1. Install NPM packages
+    ```
+    $ npm install
+    ``` 
+2. Configure your database in 'config.js'
+3. Execute the following command in your terminal to start the application:
+    ```
+    $ node server.js
+    ```
+4. You will see the following message:
+```
+Server running on http://localhost:3000
+Connected to the SQLite database.
+```
